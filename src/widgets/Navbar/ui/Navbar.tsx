@@ -1,7 +1,6 @@
 import { RoutePath } from "shared/config/routerConfig";
 import { classNames } from "shared/lib/classNames";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
 import cls from "./Navbar.module.scss";
 
@@ -12,7 +11,6 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
-      <ThemeSwitcher />
       <div className={cls.links}>
         <AppLink to={RoutePath.main} theme={AppLinkTheme.SECONDARY}>
           Main
