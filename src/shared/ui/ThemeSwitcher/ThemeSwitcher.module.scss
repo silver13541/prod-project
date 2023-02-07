@@ -1,0 +1,13 @@
+.ThemeSwitcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark path {
+    fill: #0115C6
+}
+
+.light path {
+    fill: #FFC700
+}
