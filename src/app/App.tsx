@@ -7,17 +7,20 @@ import { Sidebar } from "widgets/Sidebar";
 import { classNames } from "shared/lib/classNames";
 
 import "./styles/index.scss";
+import { Suspense } from "react";
 
 export const App = () => {
   const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Navbar />
-      <div className="content-page">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };
