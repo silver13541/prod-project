@@ -1,4 +1,4 @@
-import { Configuration } from "webpack";
+import { Configuration } from 'webpack';
 
 export interface BuildPaths {
   entry: string;
@@ -8,12 +8,12 @@ export interface BuildPaths {
 }
 
 export interface BuildEnv {
-  mode: Configuration["mode"];
+  mode: Configuration['mode'];
   port: number;
 }
 
 export interface BuildOptions {
-  mode: Configuration["mode"];
+  mode: Configuration['mode'];
   paths: BuildPaths;
   isDev: boolean;
   port: number;
