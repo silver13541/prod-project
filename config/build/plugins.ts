@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
-import { ReactRefreshPlugin } from '@pmmmwh/react-refresh-webpack-plugin';
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 import { BuildOptions } from './types';
 
