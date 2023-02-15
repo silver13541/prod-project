@@ -10,22 +10,29 @@ interface SidebarProps {
   className?: string;
 }
 
-export function Sidebar({ className }: PropsWithChildren<SidebarProps>) {
+export const Sidebar = ({ className }: PropsWithChildren<SidebarProps>) => {
     const [collapsed, setCollapsed] = useState(false);
 
     const toggle = () => setCollapsed((prev) => !prev);
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
         >
-            <button type="button" onClick={toggle}>Toggle</button>
+            <button
+                data-testid="sidebar-toggle"
+                type="button"
+                onClick={toggle}
+            >
+                Toggle
+            </button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
             </div>
         </div>
     );
-}
+};

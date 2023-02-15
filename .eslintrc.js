@@ -8,8 +8,6 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
     ],
-    overrides: [
-    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -33,7 +31,19 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'import/extensions': 'off',
-        'import/no-extraneous-dependencies': 'warn',
+        'import/no-extraneous-dependencies': [
+            'warn',
+            {
+                devDependencies: [
+                    'test.{ts,tsx}',
+                    'test-*.{ts,tsx}',
+                    '**/*{.,_}{test,spec}.{ts,tsx}',
+                    '**/jest.config.ts',
+                    '**/setupTests.ts',
+                ],
+                optionalDependencies: false,
+            },
+        ],
         'no-undef': 'warn',
         'no-unused-vars': 'off',
         'no-underscore-dangle': 'off',
@@ -54,4 +64,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
