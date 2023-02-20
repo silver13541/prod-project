@@ -3,28 +3,49 @@ import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import { classNames } from 'shared/lib/classNames';
 import cls from './Button.module.scss';
 
-export enum ThemeButton {
+export enum ButtonTheme {
   CLEAR = 'clear',
-  OUTLINE = 'outline'
+  OUTLINE = 'outline',
+  BACKGROUND = 'background',
+  BACKGROUND_INVERTED = 'background-inverted'
+}
+
+export enum ButtonSize {
+    M = 'size_m',
+    L = 'size_l',
+    XL = 'size_xl'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  theme?: ThemeButton;
+  theme?: ButtonTheme;
+  size?: ButtonSize
+  square?: boolean;
 }
 
-export function Button(props: PropsWithChildren<ButtonProps>) {
+export const Button = (props: PropsWithChildren<ButtonProps>) => {
     const {
-        theme, children, className, ...rest
+        theme,
+        square = false,
+        size = ButtonSize.M,
+        children,
+        className,
+        ...rest
     } = props;
+
+    const mods: Record<string, boolean> = {
+        [cls.square]: square,
+    };
+
+    const additional = [className, cls[theme], cls[size]];
 
     return (
         <button
             type="button"
-            className={classNames(cls.Button, {}, [className, cls[theme]])}
+            className={classNames(cls.Button, mods, additional)}
             {...rest}
         >
             {children}
         </button>
     );
-}
+};
