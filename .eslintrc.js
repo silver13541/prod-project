@@ -39,7 +39,7 @@ module.exports = {
                 devDependencies: [
                     'test.{ts,tsx}',
                     'test-*.{ts,tsx}',
-                    '**/*{.,_}{test,spec}.{ts,tsx}',
+                    '**/*{.,_}{test,spec,stories}.{ts,tsx}',
                     '**/jest.config.ts',
                     '**/setupTests.ts',
                 ],
