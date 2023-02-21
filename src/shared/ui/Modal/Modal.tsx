@@ -2,6 +2,7 @@ import { PropsWithChildren, useCallback, useEffect } from 'react';
 
 import { classNames } from 'shared/lib/classNames';
 import { Portal } from 'shared/ui/Portal';
+
 import cls from './Modal.module.scss';
 
 interface ModalProps {
