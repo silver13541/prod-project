@@ -19,10 +19,19 @@
 .content {
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--bg-color);
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;
+}
+
+.content.light {
+    color: var(--inverted-primary-color);
+    background-color: var(--inverted-bg-color);
+}
+
+.content.dark {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
 }
 
 .opened {

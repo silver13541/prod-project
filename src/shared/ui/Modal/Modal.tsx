@@ -1,5 +1,6 @@
 import { PropsWithChildren, useCallback, useEffect } from 'react';
 
+import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames';
 import { Portal } from 'shared/ui/Portal';
 
@@ -18,6 +19,8 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
         isOpen,
         onClose,
     } = props;
+
+    const { theme } = useTheme();
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -49,7 +52,10 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
         <Portal>
             <div className={classNames(cls.Modal, mods, [className])}>
                 <div className={cls.overlay} onClick={closeHandler}>
-                    <div className={cls.content} onClick={(e) => e.stopPropagation()}>
+                    <div
+                        className={classNames(cls.content, {}, [cls[theme]])}
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         {children}
                     </div>
                 </div>
