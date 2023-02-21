@@ -8,9 +8,7 @@ import { Sidebar } from 'widgets/Sidebar';
 
 import { classNames } from 'shared/lib/classNames';
 
-import './styles/index.scss';
-
-export function App() {
+export const App = () => {
     const { theme } = useTheme();
 
     return (
@@ -24,4 +22,4 @@ export function App() {
             </Suspense>
         </div>
     );
-}
+};

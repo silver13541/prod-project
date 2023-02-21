@@ -11,7 +11,7 @@ interface LangSwitcherProps {
   short?: boolean
 }
 
-export function LangSwitcher(props: PropsWithChildren<LangSwitcherProps>) {
+export const LangSwitcher = (props: PropsWithChildren<LangSwitcherProps>) => {
     const {
         className,
         short = false,
@@ -32,4 +32,4 @@ export function LangSwitcher(props: PropsWithChildren<LangSwitcherProps>) {
             {short ? t('Короткий язык') : t('Язык')}
         </Button>
     );
-}
+};
