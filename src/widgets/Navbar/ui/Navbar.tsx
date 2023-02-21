@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable i18next/no-literal-string */
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -30,7 +32,9 @@ export const Navbar = ({ className }: NavbarProps) => {
                 {t('Войти')}
 
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal} />
+            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem nobis, deleniti culpa rerum tempora illo delectus veniam voluptatibus quas itaque, quis facere dignissimos blanditiis rem velit consequatur sequi. Expedita, nulla
+            </Modal>
         </div>
     );
 };
