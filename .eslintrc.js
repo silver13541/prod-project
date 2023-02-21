@@ -51,7 +51,11 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': ['warn', {
+            html: 'enforce',
+            custom: 'ignore',
+            explicitSpread: 'ignore',
+        }],
         'react/function-component-definition': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
         'no-shadow': 'off',
