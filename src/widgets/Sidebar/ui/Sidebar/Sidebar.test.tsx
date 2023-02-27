@@ -1,4 +1,5 @@
-import { fireEvent, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { userEvent } from '@storybook/testing-library';
 
 import { renderComponent } from 'shared/lib/tests/renderComponent';
 
@@ -15,7 +16,7 @@ describe('Sidebar', () => {
         renderComponent(<Sidebar />);
 
         const toggleBtn = await screen.findByTestId('sidebar-toggle');
-        fireEvent.click(toggleBtn);
+        userEvent.click(toggleBtn);
 
         expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
     });

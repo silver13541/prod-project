@@ -7,5 +7,7 @@
   "Непредвиденная ошибка": "Unexpected error",
   "Перезагрузить страницу": "Reload page",
   "Переключение": "Toggle",
-  "Войти": "Log In"
+  "Войти": "Log In",
+  "increment": "increment",
+  "decrement": "decrement"
 }
