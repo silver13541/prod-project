@@ -1,5 +1,5 @@
 import {
-    PropsWithChildren, ReactNode, useMemo, useState,
+    PropsWithChildren, useEffect, useMemo, useState,
 } from 'react';
 import {
     LOCAL_STORAGE_THEME_KEY,
@@ -29,6 +29,10 @@ export const ThemeProvider = (props: PropsWithChildren<ThemeProviderProps>) => {
         }),
         [theme],
     );
+
+    useEffect(() => {
+        document.body.className = theme;
+    }, []);
 
     return (
         <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
