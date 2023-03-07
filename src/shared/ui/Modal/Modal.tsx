@@ -24,9 +24,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
     };
 
     const closeHandler = useCallback(() => {
-        if (onClose) {
-            onClose();
-        }
+        onClose();
     }, [onClose]);
 
     const onKeyDown = useCallback((e: KeyboardEvent) => {
@@ -40,10 +38,14 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
             window.addEventListener('keydown', onKeyDown);
         }
 
-        if (!isOpen) {
+        return () => {
             window.removeEventListener('keydown', onKeyDown);
-        }
+        };
     }, [isOpen, onKeyDown]);
+
+    if (!isOpen) {
+        return null;
+    }
 
     return (
         <Portal>

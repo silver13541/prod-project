@@ -9,5 +9,7 @@
   "Переключение": "Переключение",
   "Войти": "Войти",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "vvedite-parol": "Введите пароль",
+  "vvedite-username": "Введите username"
 }
