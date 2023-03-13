@@ -11,5 +11,9 @@
   "increment": "increment",
   "decrement": "decrement",
   "vvedite-parol": "Введите пароль",
-  "vvedite-username": "Введите username"
+  "vvedite-username": "Введите username",
+  "auth": {
+    "form_title": "Форма авторизации"
+  },
+  "logout": "Выйти"
 }

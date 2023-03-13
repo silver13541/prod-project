@@ -11,5 +11,9 @@
   "increment": "increment",
   "decrement": "decrement",
   "vvedite-username": "Enter username",
-  "vvedite-parol": "Enter password"
+  "vvedite-parol": "Enter password",
+  "auth": {
+    "form_title": "Authorization form"
+  },
+  "logout": "Log out"
 }
