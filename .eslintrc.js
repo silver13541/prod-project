@@ -63,19 +63,15 @@ module.exports = {
             'error',
             { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': ['error', { ignoreComments: true, code: 120 }],
         indent: [2, 4],
         quotes: [1, 'single'],
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
-        'no-param-reassign': ['error', {
-            props: true,
-            ignorePropertyModificationsFor: [
-                'state',
-            ],
-        }],
+        'no-param-reassign': [0],
+        'react/jsx-no-useless-fragment': [0],
     },
     globals: {
         __IS_DEV__: true,
