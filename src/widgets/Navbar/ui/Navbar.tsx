@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
-/* eslint-disable i18next/no-literal-string */
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useToggle } from 'shared/hooks';
@@ -16,7 +14,7 @@ interface NavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const authData = useSelector(getUserAuthData);
@@ -63,4 +61,4 @@ export const Navbar = ({ className }: NavbarProps) => {
             )}
         </div>
     );
-};
+});

@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react';
 import { userEvent } from '@storybook/testing-library';
-import { DeepPartial } from '@reduxjs/toolkit';
 
 import { StateSchema } from 'app/providers/StoreProvider';
 import { renderComponent } from 'shared/lib/tests/renderComponent';

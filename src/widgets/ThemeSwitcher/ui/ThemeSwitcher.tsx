@@ -1,5 +1,5 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import type { PropsWithChildren } from 'react';
+import { memo, PropsWithChildren } from 'react';
 
 import { classNames } from 'shared/lib/classNames';
 
@@ -12,7 +12,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-export const ThemeSwitcher = (props: PropsWithChildren<ThemeSwitcherProps>) => {
+export const ThemeSwitcher = memo((props: PropsWithChildren<ThemeSwitcherProps>) => {
     const { className } = props;
 
     const { theme, toggleTheme } = useTheme();
@@ -26,4 +26,4 @@ export const ThemeSwitcher = (props: PropsWithChildren<ThemeSwitcherProps>) => {
             <ThemeIcon className={cls[theme]} />
         </Button>
     );
-};
+});

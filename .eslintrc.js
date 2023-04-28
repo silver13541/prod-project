@@ -46,7 +46,7 @@ module.exports = {
                 optionalDependencies: false,
             },
         ],
-        'no-undef': 'warn',
+        'no-undef': 'off',
         'no-unused-vars': 'off',
         'no-underscore-dangle': 'off',
         'react/require-default-props': 'off',
@@ -77,6 +77,8 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
+
     },
     overrides: [
         {

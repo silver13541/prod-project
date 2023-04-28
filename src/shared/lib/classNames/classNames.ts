@@ -1,9 +1,9 @@
-type Mods = Record<string, string | boolean | undefined>;
+export type Mods = Record<string, string | boolean | undefined>;
 
 export const classNames = (
     cls: string,
     mods: Mods = {},
-    additional: string[] = [],
+    additional: (string | undefined)[] = [],
 ): string => [
     cls,
     ...additional.filter(Boolean),
