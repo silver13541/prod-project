@@ -11,7 +11,8 @@ import cls from './Input.module.scss';
 
 interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>{
     className?: string;
-    value?: string,
+    value?: string | number,
+    label?: string,
     onChange?: (value: string) => void
 }
 
@@ -19,6 +20,7 @@ export const Input = memo((props: PropsWithChildren<InputProps>) => {
     const {
         className,
         value,
+        label,
         onChange,
         type = 'text',
         ...rest
@@ -30,6 +32,7 @@ export const Input = memo((props: PropsWithChildren<InputProps>) => {
 
     return (
         <div className={classNames(cls.InputWrapper, {}, [className])}>
+            {label && <span className={cls.label}>{label}</span>}
             <input
                 type={type}
                 value={value}

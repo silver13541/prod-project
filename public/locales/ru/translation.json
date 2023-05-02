@@ -15,5 +15,7 @@
   "auth": {
     "form_title": "Форма авторизации"
   },
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "ukazhite-valyutu": "Укажите валюту",
+  "ukazhite-stranu": "Укажите страну"
 }

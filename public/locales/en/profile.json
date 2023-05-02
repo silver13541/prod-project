@@ -2,5 +2,9 @@
   "profil": "Profile",
   "redaktirovat": "Edit",
   "vashe-imya": "Your name",
-  "vasha-familiya": "Your lastname"
+  "vasha-familiya": "Your lastname",
+  "sokhranit": "Save",
+  "otmenit": "Cancel",
+  "imya-polzovatelya": "Username",
+  "avatar": "Avatar"
 }
