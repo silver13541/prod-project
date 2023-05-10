@@ -5,7 +5,7 @@ import { ProfilePageLazy } from 'pages/ProfilePage';
 import { RouteProps } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routerConfig';
 
-type AppRoutesProps = RouteProps & {
+export type AppRoutesProps = RouteProps & {
     authOnly?: boolean
 }
 
